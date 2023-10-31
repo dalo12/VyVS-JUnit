@@ -13,7 +13,17 @@ public class CurrencyConverter {
         double value = amount * ARS_1KG_GOLD / USD_1KG_GOLD;
 
         if(sell){
-            value += + value * SELL_INCREMENT;
+            value += value * SELL_INCREMENT;
+        }
+
+        return value;
+    }
+
+    public double cnyToArs(double amount, boolean sell){
+        double value = amount * ARS_1KG_GOLD / CNY_1KG_GOLD;
+
+        if(sell){
+            value += value * SELL_INCREMENT;
         }
 
         return value;
